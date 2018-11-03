@@ -104,6 +104,17 @@ getBalanceStatus(20)
 
 // Add function to calculate and return current balance
 
+// let balanceTransactions = {}
+function getCurrentBalance (accountBalance, currentTransactions) {
+//	console.log(`${Object.values(currentTransactions)}`);
+	let newBalance = Number(accountBalance) + Number(Object.values(currentTransactions));
+	if (newBalance < 0) {
+		newBalance -= 25;
+	}
+	return newBalance;
+}
+
+getCurrentBalance(5, { sept8: -6 })
 
 /////////////////////////////////////////////////////////
 // Show Account Activity

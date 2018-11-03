@@ -9,6 +9,7 @@ function showProfile(name, catchphrase, location) {
 	console.log(`PROFILE:\nName: ${name}\nCatchphrase: ${catchphrase}\nLocation: ${location}`);
 }
 
+showProfile('Amber', 'Mrr', 'Lake')
 /////////////////////////////////////////////////////////
 // Display Likes
 const interests = [
@@ -21,19 +22,32 @@ const interests = [
 
 function showLikes(likes) {
 	console.log(`THINGS I LIKE:\n`);
-	// for(let like of likes) {
-	// 	console.log(like);
-	// }
+	for(let like of likes) {
+		console.log(like);
+	}
 }
+
+showLikes(['ho','hi'])
 
 /////////////////////////////////////////////////////////
 // Display Favorites
 const favorites = {
-  // Add more favorites
+	'food' : '50/50 mix of soil/compost',
+	'tree' : 'fir',
+	'quote' : 'It\'s a secret.',
+	'color' : 'rose quartz'
+	  // Add more favorites
 };
 
 // Add function to print favorites
+function showFavorites(favorites) {
+	console.log(`FAVORITES:\n`);
+	for (let [key, value] of Object.entries(favorites)) {
+		console.log(`${key} : ${value}`);
+	}
+}
 
+showFavorites(favorites)
 
 
 /////////////////////////////////////////////////////////

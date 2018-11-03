@@ -56,6 +56,15 @@ showFavorites(favorites)
 /////////////////////////////////////////////////////////
 // Add Transactions
 
+let transactions = {};
+
+function addTransaction (date, amount, currentTransactions) {
+	currentTransactions[date] = amount;
+	console.log(currentTransactions)
+}
+
+addTransaction ('feb14', -25, transactions)
+
 // Add function to add transaction
 
 // Create object to hold transactions

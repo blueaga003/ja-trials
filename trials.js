@@ -64,6 +64,11 @@ function addTransaction (date, amount, currentTransactions) {
 }
 
 addTransaction ('feb14', -25, transactions)
+addTransaction ('may13', +1200, transactions)
+addTransaction ('may15', -100, transactions)
+addTransaction ('may21', -359, transactions)
+addTransaction ('may29', +2200, transactions)
+
 
 // Add function to add transaction
 
@@ -77,7 +82,22 @@ addTransaction ('feb14', -25, transactions)
 
 // Add function to calculate balance status
 
+function getBalanceStatus(balance) {
+	if (balance < 0) {
+		console.log(`YOU ARE OVERDRAWN`
+		);
+	}
+	else if (balance < 20) {
+		console.log(`Warning! Your balance is almost 0!`
+		);
+	}
+	else {
+		console.log(`Normal`
+		);
+	}
+}
 
+getBalanceStatus(20)
 
 /////////////////////////////////////////////////////////
 // Calculate Current Balance

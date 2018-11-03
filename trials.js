@@ -84,15 +84,15 @@ addTransaction ('may29', +2200, transactions)
 
 function getBalanceStatus(balance) {
 	if (balance < 0) {
-		console.log(`YOU ARE OVERDRAWN`
+		return(`YOU ARE OVERDRAWN`
 		);
 	}
 	else if (balance < 20) {
-		console.log(`Warning! Your balance is almost 0!`
+		return(`Warning! Your balance is almost 0!`
 		);
 	}
 	else {
-		console.log(`Normal`
+		return(`Normal`
 		);
 	}
 }
@@ -120,7 +120,23 @@ getCurrentBalance(5, { sept8: -6 })
 // Show Account Activity
 
 // Add function to print account activity
+function showAcctActivity(oldBalance, transactionHistory) {
+	let newBalance = oldBalance;
+	for (let value of Object.values(transactionHistory)){
+		newBalance += value;
+	}
+	let status = getBalanceStatus(newBalance)
+	console.log(`TRANSACTIONS:`)
+	for (let [key, value] of Object.entries(transactionHistory)){
+		console.log(`${key} : ${value}`);
+	}
+	console.log(`CURRENT BALANCE: ${newBalance}
+				CURRENT STATUS: ${status}` 
+				);
+}
 
+
+showAcctActivity(100, { sept3: -5, sept4: -20 })
 
 
 /////////////////////////////////////////////////////////

@@ -6,7 +6,7 @@
 
 // Add function to prnt profile info
 function showProfile(name, catchphrase, location) {
-	console.log(`Name: ${name}\nCatchphrase: ${catchphrase}\nLocation: ${location}`);
+	console.log(`PROFILE:\nName: ${name}\nCatchphrase: ${catchphrase}\nLocation: ${location}`);
 }
 
 /////////////////////////////////////////////////////////
@@ -19,7 +19,12 @@ const interests = [
 
 // Add function to print interests
 
-
+function showLikes(likes) {
+	console.log(`THINGS I LIKE:\n`);
+	// for(let like of likes) {
+	// 	console.log(like);
+	// }
+}
 
 /////////////////////////////////////////////////////////
 // Display Favorites
